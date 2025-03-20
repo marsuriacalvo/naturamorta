@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natura morta</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 0.8em;
+            color: #ccc;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+            gap: 10px;
+            padding: 20px;
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff; /* Fondo blanco para contenedores */
+            border: 1px solid #ddd; /* Borde opcional */
+        }
+        .image-container img {
+            max-width: 100%; /* La imagen no superará el ancho del contenedor */
+            max-height: 100%; /* La imagen no superará la altura del contenedor */
+            height: auto; /* Mantiene la proporción original */
+            width: auto; /* Mantiene la proporción original */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+        }
+        .description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-size: 1em;
+            color: #333;
+            display: none; /* Oculta el texto por defecto */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-container:hover .description {
+            display: block; /* Muestra el texto al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Mar Surià Calvo</h2>
+        <h1>Natura morta</h1>
+    </div>
+
+    <div class="gallery">
+        <!-- Imagen 1 -->
+        <div class="image-container">
+            <img src="fotos/Captura de pantalla 2025-03-20 a les 20.33.52.jpeg" alt="Paisaje 1">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 2 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_19162598_page-0001 (1).jpg" alt="Paisaje 2">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+        <!-- Imagen 3 -->
+        <div class="image-container">
+            <img src="https://www.earthmarkphotography.com/wp-content/uploads/2019/04/Rocky-Mountain-National-Park-35mm-Film-Photographer-16(pp_w768_h511).jpg" alt="Paisaje 3">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 4 -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/1437727034/es/foto/la-cordillera-del-himalaya-al-atardecer.jpg?s=612x612&w=0&k=20&c=grPABk9_rbeyahlEHSew7VTtjEw5HQM3Of_E5mQdDYU=" alt="Paisaje 4">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 5 -->
+        <div class="image-container">
+            <img src="https://media.istockphoto.com/id/1253501765/es/foto/pre-amanecer-en-las-montañas-blancas-ilumina-capas-de-hermosos-picos.jpg?s=612x612&w=0&k=20&c=wBdXybONgBFxN6Bq9I-r9PhAnKG83GJ4BFuZfcjWcT4=" alt="Paisaje 5">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 6 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/b5/50/a8/b550a84e9bcd9f1bdee193308c7702ba.jpg" alt="Paisaje 6">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 7 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_18123247_page-0001 (3).jpg" alt="Paisaje 7">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+        <!-- Imagen 8 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/f4/ef/52/f4ef52a2ecf479419e16f137b25ee2cf.jpg" alt="Paisaje 8">
+            <div class="description">
+                <p>Pintura</p>
+            </div>
+        </div>
+        <!-- Imagen 9 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_18123247_page-0001 (2).jpg" alt="Paisaje 9">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+        <!-- Imagen 10 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/d8/67/a3/d867a38347defca55256d0a240cbc442.jpg" alt="Paisaje 10">
+            <div class="description">
+                <p>Pintura</p>
+            </div>
+        </div>
+        <!-- Imagen 11 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/77/5c/f2/775cf219df50546963de07747684f31a.jpg" alt="Paisaje 11">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 12 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/b6/b6/4c/b6b64c4e45dd7b787160d1d5eab2dafe.jpg" alt="Paisaje 12">
+            <div class="description">
+                <p>No ho tinc clar</p>
+            </div>
+        </div>
+        <!-- Imagen 13 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/33/54/d3/3354d3ee94c14e77a3321c027566ece8.jpg" alt="Paisaje 13">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 14 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_18123247_page-0001.jpg" alt="Paisaje 14">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+        <!-- Imagen 15 -->
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/39/01/b0/3901b01fd9bd370b8ab02c016868c543.jpg" alt="Paisaje 15">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 16 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_18123247_page-0001 (1) 2.jpg" alt="Paisaje 16">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+        <!-- Imagen 17 -->
+        <div class="image-container">
+            <img src="fotos/a79dc89c3a48701bb879836efda5b74b.jpg" alt="Paisaje 17">
+            <div class="description">
+                <p>Fotografia</p>
+            </div>
+        </div>
+        <!-- Imagen 18 -->
+        <div class="image-container">
+            <img src="fotos/img20250320_18180402_page-0001.jpg" alt="Paisaje 18">
+            <div class="description">
+                <p>Fotograma</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
