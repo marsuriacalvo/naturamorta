@@ -52,10 +52,10 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(1.5); /* Escala la imagen al 150% */
+            transform: translate(-50%, -50%) scale(1.2); /* Escala la imagen al 120% */
             z-index: 100;
-            max-width: 90vw; /* Ocupa casi toda la pantalla */
-            max-height: 90vh;
+            max-width: 60vw; /* Tamaño moderado */
+            max-height: 60vh;
         }
         .image-container.blurred img {
             filter: blur(5px);
@@ -78,24 +78,33 @@
         .image-container:hover .description {
             display: block; /* Muestra el texto al pasar el ratón */
         }
+        .image-container.active .description {
+            display: block; /* Muestra el texto cuando la imagen está activa */
+            position: fixed;
+            bottom: 20px; /* Texto debajo de la imagen ampliada */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 101;
+        }
         .glitch-effect {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('imagen13.jpg') no-repeat center center/cover;
+            background: black;
             z-index: 1000;
             display: none;
-            animation: glitch 1s infinite;
+            justify-content: center;
+            align-items: center;
+            color: red;
+            font-size: 1.2em;
+            text-align: center;
+            animation: blink 0.5s steps(2, start) 6; /* Parpadea durante 3 segundos */
         }
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-5px, 5px); }
-            40% { transform: translate(5px, -5px); }
-            60% { transform: translate(-5px, 5px); }
-            80% { transform: translate(5px, -5px); }
-            100% { transform: translate(0); }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
         .black-screen {
             position: fixed;
@@ -247,7 +256,9 @@
     </div>
 
     <!-- Efecto de glitch y pantalla negra -->
-    <div class="glitch-effect"></div>
+    <div class="glitch-effect">
+        <p>"Ja no ens enfrontem a la natura, sinó a la seva simulació. El món s'ha convertit en un museu de la natura, un parc temàtic on l'original ha estat esborrat per la còpia.", Jean Baudrillard.</p>
+    </div>
     <div class="black-screen"></div>
 
     <script>
@@ -281,25 +292,20 @@
 
         function triggerGlitch() {
             // Muestra el glitch
-            glitchEffect.style.display = 'block';
+            glitchEffect.style.display = 'flex';
             setTimeout(() => {
                 // Oculta el glitch y muestra la pantalla negra
                 glitchEffect.style.display = 'none';
                 blackScreen.style.display = 'block';
                 setTimeout(() => {
-                    // Muestra la imagen13.jpg durante 30 segundos
-                    glitchEffect.style.display = 'block';
-                    setTimeout(() => {
-                        // Oculta la imagen13.jpg y la pantalla negra
-                        glitchEffect.style.display = 'none';
-                        blackScreen.style.display = 'none';
-                    }, 30000); // 30 segundos
-                }, 1000); // 1 segundo de pantalla negra
-            }, 1000); // 1 segundo de glitch
+                    // Oculta la pantalla negra después de 30 segundos
+                    blackScreen.style.display = 'none';
+                }, 30000); // 30 segundos de pantalla negra
+            }, 3000); // 3 segundos de glitch (parpadeo)
         }
 
-        // Activa el glitch cada 30 segundos
-        setInterval(triggerGlitch, 30000);
+        // Activa el glitch cada 60 segundos
+        setInterval(triggerGlitch, 60000);
     </script>
 
 </body>
