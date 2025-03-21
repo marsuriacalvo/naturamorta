@@ -11,13 +11,13 @@
             padding: 0;
             background-color: white; /* Fondo blanco */
             color: #333;
-            overflow: hidden;
+            overflow: auto; /* Permite hacer scroll */
         }
         .header {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: white;
+            background-color: white; /* Fondo blanco */
+            color: #333;
         }
         .header img {
             max-width: 50%; /* La imagen11.jpg será la mitad de grande */
@@ -62,14 +62,14 @@
         }
         .description {
             position: absolute;
-            top: 50%;
+            bottom: -30px; /* Texto debajo de la imagen */
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            padding: 15px;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 5px;
             background-color: rgba(255, 255, 255, 0.9);
             text-align: center;
-            font-size: 1em;
+            font-size: 0.8em; /* Texto más pequeño */
             color: #333;
             display: none; /* Oculta el texto por defecto */
             border-radius: 5px;
