@@ -294,12 +294,12 @@
             // Muestra el glitch
             glitchEffect.style.display = 'flex';
             setTimeout(() => {
-                // Oculta el glitch y muestra la pantalla negra
-                glitchEffect.style.display = 'none';
+                // Muestra la pantalla negra y mantiene el texto rojo visible
                 blackScreen.style.display = 'block';
                 setTimeout(() => {
-                    // Oculta la pantalla negra después de 30 segundos
+                    // Oculta la pantalla negra y el texto rojo después de 30 segundos
                     blackScreen.style.display = 'none';
+                    glitchEffect.style.display = 'none';
                 }, 30000); // 30 segundos de pantalla negra
             }, 3000); // 3 segundos de glitch (parpadeo)
         }
