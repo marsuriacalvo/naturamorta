@@ -6,7 +6,7 @@
     <title>Natura morta</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif;
+            font-family: 'Courier New', serif;
             margin: 0;
             padding: 0;
             background-color: white; /* Fondo blanco */
@@ -62,7 +62,7 @@
         }
         .description {
             position: absolute;
-            bottom: -30px; /* Texto debajo de la imagen */
+            bottom: -10px; /* Texto debajo de la imagen */
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
@@ -297,15 +297,15 @@
                 // Muestra la pantalla negra y mantiene el texto rojo visible
                 blackScreen.style.display = 'block';
                 setTimeout(() => {
-                    // Oculta la pantalla negra y el texto rojo después de 20 segundos
+                    // Oculta la pantalla negra y el texto rojo después de 10 segundos
                     blackScreen.style.display = 'none';
                     glitchEffect.style.display = 'none';
-                }, 20000); // 20 segundos de pantalla negra
-            }, 2000); // 3 segundos de glitch (parpadeo)
+                }, 10000); // 10 segundos de pantalla negra
+            }, 1000); // 3 segundos de glitch (parpadeo)
         }
 
-        // Activa el glitch cada 40 segundos
-        setInterval(triggerGlitch, 40000);
+        // Activa el glitch cada 20 segundos
+        setInterval(triggerGlitch, 20000);
     </script>
 
 </body>
